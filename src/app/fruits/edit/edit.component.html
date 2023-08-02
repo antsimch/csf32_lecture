@@ -1,0 +1,22 @@
+<p>edit works!</p>
+
+<h1>Edit Fruit</h1>
+
+<hr>
+<br>
+<form>
+    <div class="row">
+        <div class="col">
+            <div class="mb-3">
+                <label for="" class="form-label">Fruit</label>
+                <input type="text" class="form-control" name="name" 
+                        [(ngModel)]="fruitsObject.name">
+                <input type="number" class="form-control" name="quantity"
+                        [(ngModel)]="fruitsObject.quantity">
+                <input type="number" class="form-control" name="price"
+                        [(ngModel)]="fruitsObject.price">
+                <button type="submit" (click)="update()">Update</button>
+            </div>
+        </div>
+    </div>
+</form>

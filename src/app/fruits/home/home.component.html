@@ -1,0 +1,34 @@
+<p>home works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a routerLink="/fruits/create" class="btn btn-primary">Create</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table table-primary">
+        <thead>
+            <th scope="col">ID</th>
+            <th scope="col">Fruit</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fruit of allFruits">
+                <td>{{fruit.id}}</td>
+                <td>{{fruit.name}}</td>
+                <td>{{fruit.quantity}}</td>
+                <td>{{fruit.price}}</td>
+                <td>
+                    <a [routerLink]="['/fruits/edit', fruit.id]" class="btn btn-primary">Edit</a>
+                    &nbsp;
+                    <a (click)="delete(fruit.id)" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
